@@ -7,7 +7,7 @@ on:
         description: Chromium Branch Number to Build
         type: string
         required: true
-        default: '6367'
+        default: '6723'
 
 jobs:
   build:
@@ -65,7 +65,7 @@ jobs:
           ANGLE_TARGET_CPU: ${{ matrix.target-cpu }}
           ANGLE_TARGET_OS: ${{ matrix.target-os }}
         working-directory: angle
-        run: gn gen out/Release --args="target_cpu=\"$ANGLE_TARGET_CPU\" target_os=\"$ANGLE_TARGET_OS\" is_debug=false is_component_build=false"
+        run: gn gen out/Release --args="target_cpu=\"arm64\" target_os=\"android\" is_debug=false is_component_build=false"
 
       - name: Build
         working-directory: angle
