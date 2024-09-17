@@ -7,7 +7,7 @@ on:
         description: Chromium Branch Number to Build
         type: string
         required: true
-        default: '6723'
+        default: '6352'
 
 jobs:
   build:
